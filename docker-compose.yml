@@ -21,6 +21,7 @@ services:
     ports:
       - "8080:80"
     volumes:
+      - static:/app/backend/staticfiles
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - backend
